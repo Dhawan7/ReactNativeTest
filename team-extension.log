@@ -1,0 +1,20 @@
+2020-01-17T05:22:36.415Z - info:   [01201] *** FOLDER: /React Codes/ReactTest ***
+2020-01-17T05:22:36.416Z - info:   [01201] AzureReposVSCode/1.161.0 (VSCode 1.41.1; Darwin 18.7.0; Node 12.4.0)
+2020-01-17T05:22:36.416Z - debug:  [01201] Looking for an External Context at /React Codes/ReactTest
+2020-01-17T05:22:36.416Z - debug:  [01201] No External Context at /React Codes/ReactTest
+2020-01-17T05:22:36.417Z - debug:  [01201] Looking for TFVC repository at /React Codes/ReactTest
+2020-01-17T05:22:36.417Z - debug:  [01201] TFVC Creating Tfvc object with localPath='undefined'
+2020-01-17T05:22:36.418Z - debug:  [01201] Using TFS proxy: 
+2020-01-17T05:22:36.418Z - debug:  [01201] TFVC Retrieved from settings; localPath=''
+2020-01-17T05:22:36.418Z - warn:   [01201] TFVC Couldn't find where the TF command lives on disk.
+2020-01-17T05:22:36.418Z - error:  [01201] The path to the TFVC command line (including filename) was not found in the user settings. Please set this value (tfvc.location) and try again.
+2020-01-20T04:49:22.990Z - info:   [0761] *** FOLDER: /React Codes/ReactTest ***
+2020-01-20T04:49:22.991Z - info:   [0761] AzureReposVSCode/1.161.0 (VSCode 1.41.1; Darwin 18.7.0; Node 12.4.0)
+2020-01-20T04:49:22.991Z - debug:  [0761] Looking for an External Context at /React Codes/ReactTest
+2020-01-20T04:49:22.991Z - debug:  [0761] No External Context at /React Codes/ReactTest
+2020-01-20T04:49:22.992Z - debug:  [0761] Looking for TFVC repository at /React Codes/ReactTest
+2020-01-20T04:49:22.992Z - debug:  [0761] TFVC Creating Tfvc object with localPath='undefined'
+2020-01-20T04:49:22.992Z - debug:  [0761] Using TFS proxy: 
+2020-01-20T04:49:22.992Z - debug:  [0761] TFVC Retrieved from settings; localPath=''
+2020-01-20T04:49:22.992Z - warn:   [0761] TFVC Couldn't find where the TF command lives on disk.
+2020-01-20T04:49:22.993Z - error:  [0761] The path to the TFVC command line (including filename) was not found in the user settings. Please set this value (tfvc.location) and try again.
