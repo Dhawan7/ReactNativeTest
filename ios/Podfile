@@ -41,12 +41,14 @@ target 'ReactTest' do
   
   pod 'RNBackgroundFetch', :path => '../node_modules/react-native-background-fetch'
 
-  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+  # pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
-  target 'ReactTestTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+  pod '@mauron85_react-native-background-geolocation', :path => '../node_modules/@mauron85/react-native-background-geolocation'
+
+  # target 'ReactTestTests' do
+  #   inherit! :search_paths
+  #   # Pods for testing
+  # end
 
   # use_native_modules!
 end
@@ -54,9 +56,9 @@ end
 target 'ReactTest-tvOS' do
   # Pods for ReactTest-tvOS
 
-  target 'ReactTest-tvOSTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+  # target 'ReactTest-tvOSTests' do
+  #   inherit! :search_paths
+  #   # Pods for testing
+  # end
 
 end

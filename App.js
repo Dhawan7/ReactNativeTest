@@ -43,26 +43,19 @@ export default class App extends Component {
         fastestInterval: 5000,
         activitiesInterval: 10000,
         stopOnStillActivity: false,        
-      });
-  
-      BackgroundService.on('location', () => {
-  
-        BackgroundService.startTask(taskKey => {    
-          
-          this.addLocalDataToServer()
-            .then((res) => {
-  
-              if (res) {                
-                BackgroundService.endTask(taskKey);
-                BackgroundService.stop();   
-              }
-            })
-        });
-      });
-  
+      });        
   
       BackgroundService.on('start', () => {
         console.log('[INFO] BackgroundService service has been started');
+          BackgroundService.startTask(taskKey => {                
+            this.addLocalDataToServer()
+              .then((res) => {    
+                if (res) {                
+                  BackgroundService.endTask(taskKey);
+                  BackgroundService.stop();   
+                }
+              })
+          });
       });
   
       BackgroundService.on('stop', () => {
@@ -71,19 +64,19 @@ export default class App extends Component {
   
       BackgroundService.on('authorization', (status) => {
         console.log('[INFO] BackgroundService authorization status: ' + status);
-        if (status !== BackgroundService.AUTHORIZED) {
-          // we need to set delay or otherwise alert may not be shown
-            setTimeout(() =>
-              Alert.alert('App requires location permission', 'Would you like to open app settings?', [
-                { text: 'Yes', onPress: () => BackgroundService.showAppSettings() },
-                { text: 'No', onPress: () => console.log('No Pressed'), style: 'cancel' }
-              ]), 1000);
-        }
+        if (status !== BackgroundService.AUTHORIZED) {}
       });
   
       BackgroundService.on('background', () => {
         console.log('[INFO] App is in background');
-        BackgroundService.start();
+        AsyncStorage.getItem('pending_list')
+        .then((res) => {
+            if(res != null)
+            {
+              BackgroundService.start();
+            }
+        })
+        
       });
   
       BackgroundService.on('foreground', () => {
